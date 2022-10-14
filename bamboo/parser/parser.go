@@ -20,6 +20,7 @@ const (
 	CALL
 )
 
+// Parser 语法分析器结构
 type Parser struct {
 	lex    *lexer.Lexer // 词法分析器
 	errors []string
@@ -154,14 +155,12 @@ func (p *Parser) parseLetStatement() *ast.LetStatement {
 
 	// let后 跟随一个标识符
 	if !p.expectPeek(token.IDENT) {
-		p.peekError(token.IDENT)
 		return nil
 	}
 	stmt.Name = &ast.Identifier{Token: p.curToken, Value: p.curToken.Literal}
 
 	// 标志符后是一个等于号
 	if !p.expectPeek(token.ASSIGN) {
-		p.peekError(token.ASSIGN)
 		return nil
 	}
 

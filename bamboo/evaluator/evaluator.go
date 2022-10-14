@@ -96,11 +96,12 @@ func nativeBoolToBooleanObject(input bool) *object.Boolean {
 	return FALSE
 }
 
+// 对表达式求值
 func evalExpression(exps []ast.Expression, env *object.Environment) []object.Object {
 	var result []object.Object
 
-	for _, e := range exps {
-		evaluated := Eval(e, env)
+	for _, exp := range exps {
+		evaluated := Eval(exp, env)
 		if isError(evaluated) {
 			return []object.Object{evaluated}
 		}
@@ -222,6 +223,7 @@ func isTruthy(obj object.Object) bool {
 	}
 }
 
+// 对整段程序求值
 func evalProgram(program *ast.Program, env *object.Environment) object.Object {
 	var result object.Object
 
