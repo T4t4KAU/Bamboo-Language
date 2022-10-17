@@ -1,3 +1,13 @@
+# Introduction (Chinese)
+
+这是一门个人自创的编程语言 :sunglasses: ，英文名为Bamboo，可直译为竹，但事实上这是由中文词汇"蚌埠"谐音而来:joy:
+
+设计这门语言纯属是为了娱乐 :smiley: ，在开发过程中借鉴了《编译原理》、《Go语言自制解释器》等资料，在前者的基础上实现了自主的创新
+
+这门编程语言在语法上借鉴了多种编程语言，具有灵活的语法，但也不失易读性，目前为止已经实现了基本的赋值语句、if-else条件判断、while循环语句和函数定义与调用...
+
+解释器还在不断改进中，期待未来会变得更好:laughing:
+
 # Build
 
 ```
@@ -81,7 +91,7 @@ test4.bam
 let sum = func(nums) {
     let i = 0;
     let s = 0;
-    let size = len(nums);
+    let size = len(nums)
     while (i < size) {
         let s = s + nums[i];
         let i = i + 1;
@@ -89,8 +99,8 @@ let sum = func(nums) {
     return s;
 }
 
-let array = [1,2,3,4,5,6,7,8];
-let result = sum(array);
+let array = [1,2,3,4,5,6,7,8]
+let result = sum(array)
 print(result);
 ```
 
