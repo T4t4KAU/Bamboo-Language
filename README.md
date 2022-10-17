@@ -75,3 +75,28 @@ $ ./bamboo test.bam
 
 ```
 
+test4.bam
+
+```
+let sum = func(nums) {
+    let i = 0;
+    let s = 0;
+    let size = len(nums)
+    while (i < size) {
+        let s = s + nums[i];
+        let i = i + 1;
+    }
+    return s;
+}
+
+let array = [1,2,3,4,5,6,7,8]
+let result = sum(array)
+print(result);
+```
+
+```powershell
+$ ./bamboo test.bam 
+36 
+
+```
+
