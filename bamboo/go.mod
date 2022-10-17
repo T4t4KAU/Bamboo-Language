@@ -1,3 +1,3 @@
-module monkey
+module bamboo
 
 go 1.18
